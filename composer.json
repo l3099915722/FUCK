@@ -16,7 +16,6 @@
       "email": "99471700@qq.com"  
     }  
   ],  
-  "minimum-stability": "stable",  
   "require": {  
     "php": ">=5.4.45",  
     "yiisoft/yii2": ">=2.0.6"  

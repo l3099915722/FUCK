@@ -12,6 +12,6 @@
 */
 
 Route::get('/', function () {
-    echo "hello world!";die();
+    echo "hello docker!";die();
     return view('welcome');
 });

@@ -1,4 +1,4 @@
-FROM php:7.2.13-fpm
+FROM php:7.2.13-fpm-alpine3.8
 
 MAINTAINER gradydong <gradydong@126.com>
 LABEL Description="This image is used to start php server for Laravel." Vendor="gradydong" Version="1.0"

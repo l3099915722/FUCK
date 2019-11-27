@@ -1,8 +1,19 @@
-import React from 'react';
+import React,{ Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import RouterList from './router';
+import { HashRouter, Route, hashHistory } from 'react-router-dom'
+
+class App extends Component {
+    render(){
+        return (
+            <HashRouter>
+                <RouterList />
+            </HashRouter>
+        )
+    }
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

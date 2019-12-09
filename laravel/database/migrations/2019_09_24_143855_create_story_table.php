@@ -13,12 +13,12 @@ class CreateStoryTable extends Migration
      */
     public function up()
     {
-        Schema::table('story', function (Blueprint $table) {
+        Schema::create('story', function (Blueprint $table) {
             $table->bigIncrements("id");
-            $table->string("name", 100)->charset("utf8")->comment("故事名称");
+            $table->string("name", 100)->comment("故事名称");
             $table->text("content")->comment("故事内容");
             $table->bigInteger("edition_id")->comment("版本号");
-            $table->tinyInteger("status", 1)->comment("状态");
+            $table->tinyInteger("status")->comment("状态");
             $table->timestamps();
 
             $table->index("name");
@@ -32,8 +32,6 @@ class CreateStoryTable extends Migration
      */
     public function down()
     {
-        Schema::table('story', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('story');
     }
 }
